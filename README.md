@@ -99,7 +99,7 @@ nix build .#packages.aarch64-darwin.default
 
 ```nix
 # flake.nix
-inputs.zcode.url = "github:redskaber/zcode-nix";
+inputs.zcode.url = "github:redskaber/zcode";
 
 # configuration.nix / home.nix
 environment.systemPackages = [
