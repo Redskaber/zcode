@@ -99,7 +99,7 @@ nix build .#packages.aarch64-darwin.default
 
 ```nix
 # flake.nix
-inputs.zcode.url = "github:YOUR_HANDLE/zcode-nix";
+inputs.zcode.url = "github:redskaber/zcode-nix";
 
 # configuration.nix / home.nix
 environment.systemPackages = [
@@ -161,6 +161,7 @@ environment.systemPackages = [
   2. 删除 `chrome-sandbox` — Electron 回退到 user namespace sandbox（不需要 setuid）
 
   **升级后如果仍然失败**，需要清除旧的桌面文件（旧版的 `Exec=` 指向旧 nix store 路径）：
+
   ```bash
   rm ~/.local/share/applications/zcode.desktop
   # 重启 zcode，它会用新路径重新生成
